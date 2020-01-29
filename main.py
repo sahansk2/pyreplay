@@ -5,7 +5,7 @@ import random
 
 keyboard = Controller()
 config = configparser.ConfigParser()
-config.read('config.cfg')
+config.read('custom.cfg')
 
 cps = float(config['DEFAULT']['typeSpeedInCPM']) / 60 if config['DEFAULT']['typeSpeedInCPM'] else 0.5
 baseWait = float(config['DEFAULT']['baseEnterDelay']) if config['DEFAULT']['baseEnterDelay'] else 2
