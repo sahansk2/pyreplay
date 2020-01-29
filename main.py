@@ -31,6 +31,8 @@ with open('commandscript', 'r') as scriptfile:
             elif c == "=":
                 linewait_multiplier = float(line[1:])
                 break
+            elif c == "#":
+                break
             elif c == "\\":
                 keyboard.press(Key.ctrl)
                 keyboard.press(line[1])
