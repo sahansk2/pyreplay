@@ -17,7 +17,8 @@ for i in range(countdown, 0, -1):
     print(i)
     time.sleep(1)
 
-with open('commandscript', 'r') as scriptfile:
+script = config['DEFAULT']['commandScript'] if config['DEFAULT']['commandScript'] else "commandfile.txt" 
+with open(script, 'r') as scriptfile:
     line = scriptfile.readline()
     linewait_multiplier = 1
     while line:
